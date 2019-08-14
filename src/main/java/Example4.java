@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.ToIntFunction;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
@@ -17,6 +18,19 @@ public class Example4 {
         System.out.println("Max element in array : " + Arrays.stream(numbers).max().getAsInt());
         System.out.println("min element in array : " + Arrays.stream(numbers).min().getAsInt());
 
+        List<Employee> employees = Arrays.asList(new Employee(2300),new Employee(2400));
 
+        int totalSalary = employees.stream().mapToInt(employee -> employee.salary).sum();
+        System.out.println("Total salary of the all employee is : " + totalSalary);
+
+    }
+}
+
+
+class Employee{
+    public int salary;
+
+    public Employee(int salary){
+        this.salary = salary;
     }
 }
