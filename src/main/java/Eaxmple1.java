@@ -27,5 +27,12 @@ public class Eaxmple1 {
         citiesLived.forEach(System.out::println);
 
 
+        // This will print all the element with method reference. Please note in method reference parameter to lambda and method call is same
+        // With custom print
+        citiesLived.forEach(Eaxmple1::customPrint);
+    }
+
+    public static void customPrint(String name){
+        System.out.println("Custom method : Citi i lived in is " + name);
     }
 }
