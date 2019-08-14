@@ -20,7 +20,7 @@ public class Example4 {
 
         List<Employee> employees = Arrays.asList(new Employee(2300),new Employee(2400));
 
-        int totalSalary = employees.stream().mapToInt(employee -> employee.salary).sum();
+        int totalSalary = employees.parallelStream().mapToInt(employee -> employee.salary).sum();
         System.out.println("Total salary of the all employee is : " + totalSalary);
 
     }
