@@ -18,5 +18,10 @@ public class Example3 {
         System.out.println("Filtered cities list");
         filteredCities.forEach(System.out::println);
 
+        // This method checks if any element in the list is Pune
+        System.out.println("Pune Present " +  citiesLived.stream().anyMatch(city -> city.equals("Pune")));
+
+        // Any method of stream that does not return a Stream object is terminal method
+
     }
 }
