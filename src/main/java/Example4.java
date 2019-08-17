@@ -1,8 +1,6 @@
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.ToIntFunction;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class Example4 {
 
@@ -11,7 +9,7 @@ public class Example4 {
      * @param args
      */
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         int[] numbers = {4,1,2,4,6,7,8};
 
         System.out.println("Sum of all the numbers : " + Arrays.stream(numbers).sum());
