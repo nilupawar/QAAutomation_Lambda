@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,7 +8,7 @@ public class Example4 {
      * @param args
      */
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int[] numbers = {4,1,2,4,6,7,8};
 
         System.out.println("Sum of all the numbers : " + Arrays.stream(numbers).sum());
@@ -27,7 +26,6 @@ public class Example4 {
 
 class Employee{
     public int salary;
-
     public Employee(int salary){
         this.salary = salary;
     }
