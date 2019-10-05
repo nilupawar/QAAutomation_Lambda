@@ -1,7 +1,6 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class MapAverage {
     public static void main(String[] args) {
@@ -18,19 +17,10 @@ public class MapAverage {
                 .entrySet()
                 .stream()
                 .peek(System.out::println)
-                .map(p->p.getValue())
+                .map(Map.Entry::getValue)
                 .collect(Collectors.toList())
                 .stream()
                 .mapToInt(a->a)
                 .average());
-
-
-
-
-
-
-
-
-
     }
 }
