@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamAPISecond {
@@ -14,5 +16,16 @@ public class StreamAPISecond {
                 .stream()
                 .filter(e->e.getValue().equals("98"))
                 .forEach(e-> System.out.println("Age is " + e.getKey()));
+
+
+        Map<String,String> mymap = new HashMap<>();
+        mymap.put("a","s");
+        mymap.put("b","e");
+
+        Map<String,String> newMap = mymap
+                .entrySet()
+                .stream()
+                .filter(a-> a.getKey()=="a")
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 }
