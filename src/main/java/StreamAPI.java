@@ -1,5 +1,4 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamAPI {
@@ -15,7 +14,9 @@ public class StreamAPI {
                 .filter(a-> a.equals('i') || a.equals('h') )
                 .forEach(System.out::println);
 
-        Stream.of(nameArray)
+        IntStream
+                .range(0, nameArray.length)
+                .mapToObj(i -> nameArray[i])
                 .forEach(System.out::println);
 
         Stream.of(fullNames)
