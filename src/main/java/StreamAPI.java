@@ -6,12 +6,12 @@ public class StreamAPI {
 
         String fullName = "Nilesh";
         char[] nameArray = fullName.toCharArray();
-        String[] fullNames = {"Tulja","Supriya","Nilesh"};
+        String[] fullNames = {"Tulja", "Supriya", "Nilesh"};
 
         fullName
                 .chars()
-                .mapToObj(a->(char)a)
-                .filter(a-> a.equals('i') || a.equals('h') )
+                .mapToObj(a -> (char) a)
+                .filter(a -> a.equals('i') || a.equals('h'))
                 .forEach(System.out::println);
 
         IntStream
@@ -20,7 +20,7 @@ public class StreamAPI {
                 .forEach(System.out::println);
 
         Stream.of(fullNames)
-                .filter(a->a.equalsIgnoreCase("Tulja"))
+                .filter(a -> a.equalsIgnoreCase("Tulja"))
                 .forEach(System.out::println);
     }
 }

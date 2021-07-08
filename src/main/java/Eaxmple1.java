@@ -6,11 +6,12 @@ public class Eaxmple1 {
 
     /**
      * Desc : This example will show how to print all elements using forEach with and without lambda
+     *
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        List<String> citiesLived = Arrays.asList("Pune","London", "Dublin", "JoBerg", "KL", "Machester");
+        List<String> citiesLived = Arrays.asList("Pune", "London", "Dublin", "JoBerg", "KL", "Machester");
 
         // This will print all the element without lambda
         citiesLived.forEach(new Consumer<String>() {
@@ -32,7 +33,7 @@ public class Eaxmple1 {
         citiesLived.forEach(Eaxmple1::customPrint);
     }
 
-    public static void customPrint(String name){
+    public static void customPrint(String name) {
         System.out.println("Custom method : Citi i lived in is " + name);
     }
 }
